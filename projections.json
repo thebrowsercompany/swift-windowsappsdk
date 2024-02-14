@@ -1,0 +1,25 @@
+{
+  "package": "Microsoft.WindowsAppSDK",
+  "project": "WinAppSDK",
+  "dependencies": [
+    "Microsoft.Windows.SDK.Contracts"
+  ],
+  "include": [
+    "Microsoft.UI.Composition",
+    "Microsoft.UI.Composition.Interactions",
+    "Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation",
+    "Microsoft.UI.Composition.SystemBackdrops",
+    "Microsoft.UI.Dispatching.DispatcherQueueController",
+    "Microsoft.UI.Input",
+    "Microsoft.UI.Windowing.AppWindow",
+    "Microsoft.UI.Windowing.AppWindowTitleBar",
+    "Microsoft.UI.Windowing.DisplayArea",
+    "Microsoft.UI.Windowing.FullScreenPresenter",
+    "Microsoft.UI.Windowing.OverlappedPresenter",
+    "Microsoft.Windows.ApplicationModel.Resources.ResourceManager",
+    "Microsoft.Windows.AppLifecycle.ActivationRegistrationManager",
+    "Microsoft.Windows.AppLifecycle.AppInstance"
+  ],
+  "exclude": [
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Generate swift-windowsappsdk bindings",
+            "command": "${workspaceFolder:swift-windowsappsdk}/generate-bindings.ps1",
+            "problemMatcher": []
+        }
+    ]
+}
