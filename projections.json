@@ -1,0 +1,30 @@
+{
+  "swift-winrt": "0.5.0",
+  "package": {
+    "id": "Microsoft.WindowsAppSDK",
+    "version": "1.5.240205001-preview1"
+  },
+  "project": "WinAppSDK",
+  "dependencies": [
+    { "id": "Microsoft.Windows.SDK.Contracts", "version": "10.0.18362.2005" }
+  ],
+  "include": [
+    "Microsoft.UI.Composition",
+    "Microsoft.UI.Composition.Interactions",
+    "Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation",
+    "Microsoft.UI.Composition.SystemBackdrops",
+    "Microsoft.UI.Content.DesktopChildSiteBridge",
+    "Microsoft.UI.Dispatching.DispatcherQueueController",
+    "Microsoft.UI.Input",
+    "Microsoft.UI.Windowing.AppWindow",
+    "Microsoft.UI.Windowing.AppWindowTitleBar",
+    "Microsoft.UI.Windowing.DisplayArea",
+    "Microsoft.UI.Windowing.FullScreenPresenter",
+    "Microsoft.UI.Windowing.OverlappedPresenter",
+    "Microsoft.Windows.ApplicationModel.Resources.ResourceManager",
+    "Microsoft.Windows.AppLifecycle.ActivationRegistrationManager",
+    "Microsoft.Windows.AppLifecycle.AppInstance"
+  ],
+  "exclude": [
+  ]
+}
