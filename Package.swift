@@ -2,15 +2,14 @@
 
 import PackageDescription
 import Foundation
+
 let currentDirectory = Context.packageDirectory
 
-print(currentDirectory)
-let includeSettings: [SwiftSetting] = [
-    .unsafeFlags(["-I\(currentDirectory)/vendor/include"])
-]
-
 let linkerSettings: [LinkerSetting] = [
-    .unsafeFlags(["-L\(currentDirectory)/vendor/lib"])
+/* Figure out magic incantation so we can delay load these dlls
+    .unsafeFlags(["-L\(currentDirectory)/Sources/CWinAppSDK/nuget/lib"]),
+    .unsafeFlags(["-Xlinker" , "/DELAYLOAD:Microsoft.WindowsAppRuntime.Bootstrap.dll"]),
+*/
 ]
 
 let package = Package(
@@ -33,14 +32,13 @@ let package = Package(
                 .product(name: "UWP", package: "swift-uwp"),
                 .product(name: "WindowsFoundation", package: "swift-windowsfoundation"),
                 "CWinAppSDK"
-            ],
-            resources: [
-                .copy("../../vendor/bin/Microsoft.WindowsAppRuntime.Bootstrap.dll"),
             ]
         ),
         .target(
             name: "CWinAppSDK",
-            swiftSettings: includeSettings,
+            resources: [
+                .copy("nuget/bin/Microsoft.WindowsAppRuntime.Bootstrap.dll"),
+            ],
             linkerSettings: linkerSettings
         ),
         .target(
@@ -50,5 +48,11 @@ let package = Package(
                 "CWinAppSDK"
             ]
         ),
+        .testTarget(
+            name: "WinAppSDKExtTests",
+            dependencies: [
+                "WinAppSDKExt",
+            ]
+        )
     ]
 )

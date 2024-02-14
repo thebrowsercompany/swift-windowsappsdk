@@ -101,7 +101,8 @@ function Copy-PackageAssets {
     $Package = $Projections.Package
     $PackageVersion = Get-NugetPackageVersion -Package $Package
 
-    $ProjectDir = Join-Path $PSScriptRoot "vendor"
+    $ProjectName = $Projections.Project
+    $ProjectDir = Join-Path $PSScriptRoot "Sources\C$ProjectName\nuget"
 
     # copy dlls from runtimes\win-<arch>\native to vendor\bin
     $PackageDir = Join-Path $PackagesDir "$Package.$PackageVersion"
