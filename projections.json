@@ -9,6 +9,7 @@
     "Microsoft.UI.Composition.Interactions",
     "Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation",
     "Microsoft.UI.Composition.SystemBackdrops",
+    "Microsoft.UI.Content.DesktopChildSiteBridge",
     "Microsoft.UI.Dispatching.DispatcherQueueController",
     "Microsoft.UI.Input",
     "Microsoft.UI.Windowing.AppWindow",

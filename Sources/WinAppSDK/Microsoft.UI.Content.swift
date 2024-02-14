@@ -9,6 +9,8 @@ import CWinRT
 public typealias ContentCoordinateRoundingMode = __x_ABI_CMicrosoft_CUI_CContent_CContentCoordinateRoundingMode
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentlayoutdirection)
 public typealias ContentLayoutDirection = __x_ABI_CMicrosoft_CUI_CContent_CContentLayoutDirection
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsizepolicy)
+public typealias ContentSizePolicy = __x_ABI_CMicrosoft_CUI_CContent_CContentSizePolicy
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentcoordinateconverter)
 open class ContentCoordinateConverter : WinRTClass {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentCoordinateConverter
@@ -616,6 +618,416 @@ public final class ContentIslandStateChangedEventArgs : WinRTClass {
     }
 }
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteenvironmentview)
+open class ContentSiteEnvironmentView : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteEnvironmentView
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView>?) -> ContentSiteEnvironmentView? {
+        guard let abi = abi else { return nil }
+        return UnsealedWinRTClassWrapper<Composable>.unwrapFrom(base: abi)
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init()
+        MakeComposed(composing: composing, (self as! Composable.Class), createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IContentSiteEnvironmentViewFactory : __ABI_Microsoft_UI_Content.IContentSiteEnvironmentViewFactory =  try! RoGetActivationFactory(HString("Microsoft.UI.Content.ContentSiteEnvironmentView"))
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteenvironmentview.appwindowid)
+    public var appWindowId : WinAppSDK.WindowId {
+        get { try! _default.get_AppWindowIdImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteenvironmentview.displayid)
+    public var displayId : WinAppSDK.DisplayId {
+        get { try! _default.get_DisplayIdImpl() }
+    }
+
+    internal enum IContentSiteEnvironmentView : ComposableImpl {
+        internal typealias CABI = C_IInspectable
+        internal typealias SwiftABI = WindowsFoundation.IInspectable
+        internal typealias Class = ContentSiteEnvironmentView
+        internal typealias SwiftProjection = WinRTClassWeakReference<Class>
+        internal enum Default : AbiInterface {
+            internal typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView
+            internal typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteEnvironmentView
+        }
+    }
+    internal typealias Composable = IContentSiteEnvironmentView
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview)
+open class ContentSiteView : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteView
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView>?) -> ContentSiteView? {
+        guard let abi = abi else { return nil }
+        return UnsealedWinRTClassWrapper<Composable>.unwrapFrom(base: abi)
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init()
+        MakeComposed(composing: composing, (self as! Composable.Class), createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IContentSiteViewFactory : __ABI_Microsoft_UI_Content.IContentSiteViewFactory =  try! RoGetActivationFactory(HString("Microsoft.UI.Content.ContentSiteView"))
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.actualsize)
+    public var actualSize : WindowsFoundation.Vector2 {
+        get { try! _default.get_ActualSizeImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.clientsize)
+    public var clientSize : UWP.SizeInt32 {
+        get { try! _default.get_ClientSizeImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.coordinateconverter)
+    public var coordinateConverter : ContentCoordinateConverter! {
+        get { try! _default.get_CoordinateConverterImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.dispatcherqueue)
+    public var dispatcherQueue : WinAppSDK.DispatcherQueue! {
+        get { try! _default.get_DispatcherQueueImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.environmentview)
+    public var environmentView : ContentSiteEnvironmentView! {
+        get { try! _default.get_EnvironmentViewImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.isconnected)
+    public var isConnected : Bool {
+        get { try! _default.get_IsConnectedImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.issiteenabled)
+    public var isSiteEnabled : Bool {
+        get { try! _default.get_IsSiteEnabledImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.issitevisible)
+    public var isSiteVisible : Bool {
+        get { try! _default.get_IsSiteVisibleImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.layoutdirection)
+    public var layoutDirection : ContentLayoutDirection {
+        get { try! _default.get_LayoutDirectionImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.overridescale)
+    public var overrideScale : Float {
+        get { try! _default.get_OverrideScaleImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.parentscale)
+    public var parentScale : Float {
+        get { try! _default.get_ParentScaleImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.rasterizationscale)
+    public var rasterizationScale : Float {
+        get { try! _default.get_RasterizationScaleImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.requestedsize)
+    public var requestedSize : WindowsFoundation.Vector2 {
+        get { try! _default.get_RequestedSizeImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.shouldapplyrasterizationscale)
+    public var shouldApplyRasterizationScale : Bool {
+        get { try! _default.get_ShouldApplyRasterizationScaleImpl() }
+    }
+
+    internal enum IContentSiteView : ComposableImpl {
+        internal typealias CABI = C_IInspectable
+        internal typealias SwiftABI = WindowsFoundation.IInspectable
+        internal typealias Class = ContentSiteView
+        internal typealias SwiftProjection = WinRTClassWeakReference<Class>
+        internal enum Default : AbiInterface {
+            internal typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView
+            internal typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteView
+        }
+    }
+    internal typealias Composable = IContentSiteView
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge)
+public final class DesktopChildSiteBridge : WinAppSDK.DesktopSiteBridge {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IDesktopChildSiteBridge
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge>?) -> DesktopChildSiteBridge? {
+        guard let abi = abi else { return nil }
+        return .init(fromAbi: WindowsFoundation.IInspectable(abi))
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    private static let _IDesktopChildSiteBridgeStatics: __ABI_Microsoft_UI_Content.IDesktopChildSiteBridgeStatics = try! RoGetActivationFactory(HString("Microsoft.UI.Content.DesktopChildSiteBridge"))
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.create)
+    public static func create(_ compositor: WinAppSDK.Compositor!, _ parentWindowId: WinAppSDK.WindowId) -> DesktopChildSiteBridge! {
+        return try! _IDesktopChildSiteBridgeStatics.CreateImpl(compositor, parentWindowId)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.resizepolicy)
+    public var resizePolicy : ContentSizePolicy {
+        get { try! _default.get_ResizePolicyImpl() }
+        set { try! _default.put_ResizePolicyImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.siteview)
+    public var siteView : ContentSiteView! {
+        get { try! _default.get_SiteViewImpl() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge)
+open class DesktopSiteBridge : WinRTClass, WinAppSDK.IClosableNotifier, WindowsFoundation.IClosable, IContentSiteBridge {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IDesktopSiteBridge
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge>?) -> DesktopSiteBridge? {
+        guard let abi = abi else { return nil }
+        return UnsealedWinRTClassWrapper<Composable>.unwrapFrom(base: abi)
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init()
+        MakeComposed(composing: composing, (self as! Composable.Class), createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IDesktopSiteBridgeFactory : __ABI_Microsoft_UI_Content.IDesktopSiteBridgeFactory =  try! RoGetActivationFactory(HString("Microsoft.UI.Content.DesktopSiteBridge"))
+
+    private static let _IDesktopSiteBridgeStatics: __ABI_Microsoft_UI_Content.IDesktopSiteBridgeStatics = try! RoGetActivationFactory(HString("Microsoft.UI.Content.DesktopSiteBridge"))
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.issupported)
+    public class func isSupported() -> Bool {
+        return try! _IDesktopSiteBridgeStatics.IsSupportedImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.connect)
+    public func connect(_ content: ContentIsland!) throws {
+        try _default.ConnectImpl(content)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.disable)
+    public func disable() throws {
+        try _default.DisableImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.enable)
+    public func enable() throws {
+        try _default.EnableImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.hide)
+    public func hide() throws {
+        try _default.HideImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.moveandresize)
+    public func moveAndResize(_ rect: UWP.RectInt32) throws {
+        try _default.MoveAndResizeImpl(rect)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.moveinzorderatbottom)
+    public func moveInZOrderAtBottom() throws {
+        try _default.MoveInZOrderAtBottomImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.moveinzorderattop)
+    public func moveInZOrderAtTop() throws {
+        try _default.MoveInZOrderAtTopImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.moveinzorderbelow)
+    public func moveInZOrderBelow(_ windowId: WinAppSDK.WindowId) throws {
+        try _default.MoveInZOrderBelowImpl(windowId)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.show)
+    public func show() throws {
+        try _default.ShowImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.isenabled)
+    public var isEnabled : Bool {
+        get { try! _default.get_IsEnabledImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.isvisible)
+    public var isVisible : Bool {
+        get { try! _default.get_IsVisibleImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.windowid)
+    public var windowId : WinAppSDK.WindowId {
+        get { try! _default.get_WindowIdImpl() }
+    }
+
+    private lazy var _IClosableNotifier: __ABI_Microsoft_UI.IClosableNotifier! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.isclosed)
+    public var isClosed : Bool {
+        get { try! _IClosableNotifier.get_IsClosedImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.closed)
+    public lazy var closed : Event<WinAppSDK.ClosableNotifierHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IClosableNotifier else { return .init() }
+          return try! this.add_ClosedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IClosableNotifier.remove_ClosedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.frameworkclosed)
+    public lazy var frameworkClosed : Event<WinAppSDK.ClosableNotifierHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IClosableNotifier else { return .init() }
+          return try! this.add_FrameworkClosedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IClosableNotifier.remove_FrameworkClosedImpl($0)
+       }
+      )
+    }()
+
+    private lazy var _IClosable: __ABI_Windows_Foundation.IClosable! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.close)
+    public func close() throws {
+        try _IClosable.CloseImpl()
+    }
+
+    private lazy var _IContentSiteBridge: __ABI_Microsoft_UI_Content.IContentSiteBridge! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.dispatcherqueue)
+    public var dispatcherQueue : WinAppSDK.DispatcherQueue! {
+        get { try! _IContentSiteBridge.get_DispatcherQueueImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.layoutdirectionoverride)
+    public var layoutDirectionOverride : ContentLayoutDirection? {
+        get { try! _IContentSiteBridge.get_LayoutDirectionOverrideImpl() }
+        set { try! _IContentSiteBridge.put_LayoutDirectionOverrideImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.overridescale)
+    public var overrideScale : Float {
+        get { try! _IContentSiteBridge.get_OverrideScaleImpl() }
+        set { try! _IContentSiteBridge.put_OverrideScaleImpl(newValue) }
+    }
+
+    internal enum IDesktopSiteBridge : ComposableImpl {
+        internal typealias CABI = C_IInspectable
+        internal typealias SwiftABI = WindowsFoundation.IInspectable
+        internal typealias Class = DesktopSiteBridge
+        internal typealias SwiftProjection = WinRTClassWeakReference<Class>
+        internal enum Default : AbiInterface {
+            internal typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge
+            internal typealias SwiftABI = __ABI_Microsoft_UI_Content.IDesktopSiteBridge
+        }
+    }
+    internal typealias Composable = IDesktopSiteBridge
+    deinit {
+        _default = nil
+        _IClosableNotifier = nil
+        _IClosable = nil
+        _IContentSiteBridge = nil
+    }
+}
+
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridge)
 public protocol IContentSiteBridge : WindowsFoundation.IClosable {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridge.dispatcherqueue)
@@ -666,4 +1078,17 @@ extension WinAppSDK.ContentLayoutDirection {
     }
 }
 extension WinAppSDK.ContentLayoutDirection: @retroactive Hashable, @retroactive Codable {}
+
+extension WinAppSDK.ContentSizePolicy {
+    public static var none : WinAppSDK.ContentSizePolicy {
+        __x_ABI_CMicrosoft_CUI_CContent_CContentSizePolicy_None
+    }
+    public static var resizeContentToParentWindow : WinAppSDK.ContentSizePolicy {
+        __x_ABI_CMicrosoft_CUI_CContent_CContentSizePolicy_ResizeContentToParentWindow
+    }
+    public static var resizeParentWindowToContent : WinAppSDK.ContentSizePolicy {
+        __x_ABI_CMicrosoft_CUI_CContent_CContentSizePolicy_ResizeParentWindowToContent
+    }
+}
+extension WinAppSDK.ContentSizePolicy: @retroactive Hashable, @retroactive Codable {}
 

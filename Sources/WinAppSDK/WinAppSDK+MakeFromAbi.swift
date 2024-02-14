@@ -604,6 +604,22 @@ fileprivate func makeContentIslandStateChangedEventArgsFrom(abi: WindowsFoundati
     return ContentIslandStateChangedEventArgs(fromAbi: abi)
 }
 
+fileprivate func makeContentSiteEnvironmentViewFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    return ContentSiteEnvironmentView(fromAbi: abi)
+}
+
+fileprivate func makeContentSiteViewFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    return ContentSiteView(fromAbi: abi)
+}
+
+fileprivate func makeDesktopChildSiteBridgeFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    return DesktopChildSiteBridge(fromAbi: abi)
+}
+
+fileprivate func makeDesktopSiteBridgeFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    return DesktopSiteBridge(fromAbi: abi)
+}
+
 fileprivate func makeDispatcherExitDeferralFrom(abi: WindowsFoundation.IInspectable) -> Any {
     return DispatcherExitDeferral(fromAbi: abi)
 }
@@ -998,6 +1014,10 @@ public class __MakeFromAbi: MakeFromAbi {
             case "ContentIslandAutomationProviderRequestedEventArgs": return makeContentIslandAutomationProviderRequestedEventArgsFrom(abi: abi)
             case "ContentIslandEnvironment": return makeContentIslandEnvironmentFrom(abi: abi)
             case "ContentIslandStateChangedEventArgs": return makeContentIslandStateChangedEventArgsFrom(abi: abi)
+            case "ContentSiteEnvironmentView": return makeContentSiteEnvironmentViewFrom(abi: abi)
+            case "ContentSiteView": return makeContentSiteViewFrom(abi: abi)
+            case "DesktopChildSiteBridge": return makeDesktopChildSiteBridgeFrom(abi: abi)
+            case "DesktopSiteBridge": return makeDesktopSiteBridgeFrom(abi: abi)
             case "DispatcherExitDeferral": return makeDispatcherExitDeferralFrom(abi: abi)
             case "DispatcherQueue": return makeDispatcherQueueFrom(abi: abi)
             case "DispatcherQueueController": return makeDispatcherQueueControllerFrom(abi: abi)

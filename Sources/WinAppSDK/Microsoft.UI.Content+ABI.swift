@@ -61,6 +61,42 @@ private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridge: WindowsFoun
     .init(Data1: 0xFAAAB99E, Data2: 0xA42B, Data3: 0x549C, Data4: ( 0x92,0xDF,0x3B,0x6D,0x6E,0x1E,0x36,0x8B ))// FAAAB99E-A42B-549C-92DF-3B6D6E1E368B
 }
 
+private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView: WindowsFoundation.IID {
+    .init(Data1: 0x5B6FE420, Data2: 0x0BB3, Data3: 0x54DD, Data4: ( 0x85,0x89,0x78,0x6C,0xF0,0x2E,0x38,0xF1 ))// 5B6FE420-0BB3-54DD-8589-786CF02E38F1
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentViewFactory: WindowsFoundation.IID {
+    .init(Data1: 0xC901EDF2, Data2: 0xF184, Data3: 0x5A64, Data4: ( 0x8D,0x58,0x8C,0xF8,0xEF,0xA8,0xB6,0x78 ))// C901EDF2-F184-5A64-8D58-8CF8EFA8B678
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView: WindowsFoundation.IID {
+    .init(Data1: 0x2D5D8DD5, Data2: 0x358E, Data3: 0x5B05, Data4: ( 0x99,0x3B,0xB2,0x66,0x6D,0x17,0x86,0xB3 ))// 2D5D8DD5-358E-5B05-993B-B2666D1786B3
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteViewFactory: WindowsFoundation.IID {
+    .init(Data1: 0x9EFD72F0, Data2: 0x63EF, Data3: 0x5B6A, Data4: ( 0xA5,0x0C,0x56,0x85,0xBD,0x81,0x00,0xF1 ))// 9EFD72F0-63EF-5B6A-A50C-5685BD8100F1
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge: WindowsFoundation.IID {
+    .init(Data1: 0xB2F2FF7B, Data2: 0x1825, Data3: 0x51B0, Data4: ( 0xB8,0x0B,0x75,0x99,0x88,0x9C,0x56,0x9F ))// B2F2FF7B-1825-51B0-B80B-7599889C569F
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridgeStatics: WindowsFoundation.IID {
+    .init(Data1: 0xAB6B82DE, Data2: 0x6A47, Data3: 0x5DE3, Data4: ( 0xA8,0x60,0x61,0x3C,0x8D,0xB6,0x79,0xAB ))// AB6B82DE-6A47-5DE3-A860-613C8DB679AB
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge: WindowsFoundation.IID {
+    .init(Data1: 0xF0AE8750, Data2: 0x905C, Data3: 0x50A2, Data4: ( 0x8A,0x12,0x45,0x45,0xC6,0x24,0x5B,0xB4 ))// F0AE8750-905C-50A2-8A12-4545C6245BB4
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeFactory: WindowsFoundation.IID {
+    .init(Data1: 0xD94EE1FF, Data2: 0x3AF1, Data3: 0x54D0, Data4: ( 0x93,0x11,0x65,0x2B,0x29,0xC5,0x7C,0x5B ))// D94EE1FF-3AF1-54D0-9311-652B29C57C5B
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeStatics: WindowsFoundation.IID {
+    .init(Data1: 0xE0B38DAF, Data2: 0x9CD4, Data3: 0x50C5, Data4: ( 0x83,0xEE,0xC7,0x6E,0x3C,0xF3,0x4E,0xBA ))// E0B38DAF-9CD4-50C5-83EE-C76E3CF34EBA
+}
+
 public enum __ABI_Microsoft_UI_Content {
     public class IContentCoordinateConverter: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentCoordinateConverter }
@@ -663,4 +699,298 @@ public enum __ABI_Microsoft_UI_Content {
     )
 
     public typealias IContentSiteBridgeWrapper = InterfaceWrapperBase<__IMPL_Microsoft_UI_Content.IContentSiteBridgeBridge>
+    public class IContentSiteEnvironmentView: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView }
+
+        internal func get_AppWindowIdImpl() throws -> WinAppSDK.WindowId {
+            var value: __x_ABI_CMicrosoft_CUI_CWindowId = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_AppWindowId(pThis, &value))
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_DisplayIdImpl() throws -> WinAppSDK.DisplayId {
+            var value: __x_ABI_CMicrosoft_CUI_CDisplayId = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayId(pThis, &value))
+            }
+            return .from(abi: value)
+        }
+
+    }
+
+    public class IContentSiteEnvironmentViewFactory: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentViewFactory }
+
+    }
+
+    public class IContentSiteView: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView }
+
+        internal func get_ActualSizeImpl() throws -> WindowsFoundation.Vector2 {
+            var value: __x_ABI_CWindows_CFoundation_CNumerics_CVector2 = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualSize(pThis, &value))
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_ClientSizeImpl() throws -> UWP.SizeInt32 {
+            var value: __x_ABI_CWindows_CGraphics_CSizeInt32 = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClientSize(pThis, &value))
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_CoordinateConverterImpl() throws -> WinAppSDK.ContentCoordinateConverter? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_CoordinateConverter(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_DispatcherQueueImpl() throws -> WinAppSDK.DispatcherQueue? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_DispatcherQueue(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_EnvironmentViewImpl() throws -> WinAppSDK.ContentSiteEnvironmentView? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_EnvironmentView(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_IsConnectedImpl() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsConnected(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func get_IsSiteEnabledImpl() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsSiteEnabled(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func get_IsSiteVisibleImpl() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsSiteVisible(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func get_LayoutDirectionImpl() throws -> WinAppSDK.ContentLayoutDirection {
+            var value: __x_ABI_CMicrosoft_CUI_CContent_CContentLayoutDirection = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_LayoutDirection(pThis, &value))
+            }
+            return value
+        }
+
+        internal func get_OverrideScaleImpl() throws -> Float {
+            var value: FLOAT = 0.0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_OverrideScale(pThis, &value))
+            }
+            return value
+        }
+
+        internal func get_ParentScaleImpl() throws -> Float {
+            var value: FLOAT = 0.0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ParentScale(pThis, &value))
+            }
+            return value
+        }
+
+        internal func get_RasterizationScaleImpl() throws -> Float {
+            var value: FLOAT = 0.0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_RasterizationScale(pThis, &value))
+            }
+            return value
+        }
+
+        internal func get_RequestedSizeImpl() throws -> WindowsFoundation.Vector2 {
+            var value: __x_ABI_CWindows_CFoundation_CNumerics_CVector2 = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_RequestedSize(pThis, &value))
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_ShouldApplyRasterizationScaleImpl() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ShouldApplyRasterizationScale(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+    }
+
+    public class IContentSiteViewFactory: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteViewFactory }
+
+    }
+
+    public class IDesktopChildSiteBridge: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge }
+
+        internal func get_ResizePolicyImpl() throws -> WinAppSDK.ContentSizePolicy {
+            var value: __x_ABI_CMicrosoft_CUI_CContent_CContentSizePolicy = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ResizePolicy(pThis, &value))
+            }
+            return value
+        }
+
+        internal func put_ResizePolicyImpl(_ value: WinAppSDK.ContentSizePolicy) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_ResizePolicy(pThis, value))
+            }
+        }
+
+        internal func get_SiteViewImpl() throws -> WinAppSDK.ContentSiteView? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_SiteView(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+    }
+
+    public class IDesktopChildSiteBridgeStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridgeStatics }
+
+        internal func CreateImpl(_ compositor: WinAppSDK.Compositor?, _ parentWindowId: WinAppSDK.WindowId) throws -> WinAppSDK.DesktopChildSiteBridge? {
+            let (result) = try ComPtrs.initialize { resultAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridgeStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, RawPointer(compositor), .from(swift: parentWindowId), &resultAbi))
+                }
+            }
+            return .from(abi: result)
+        }
+
+    }
+
+    public class IDesktopSiteBridge: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge }
+
+        internal func get_IsEnabledImpl() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsEnabled(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func get_IsVisibleImpl() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsVisible(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func get_WindowIdImpl() throws -> WinAppSDK.WindowId {
+            var value: __x_ABI_CMicrosoft_CUI_CWindowId = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_WindowId(pThis, &value))
+            }
+            return .from(abi: value)
+        }
+
+        internal func ConnectImpl(_ content: WinAppSDK.ContentIsland?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.Connect(pThis, RawPointer(content)))
+            }
+        }
+
+        internal func DisableImpl() throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.Disable(pThis))
+            }
+        }
+
+        internal func EnableImpl() throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.Enable(pThis))
+            }
+        }
+
+        internal func HideImpl() throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.Hide(pThis))
+            }
+        }
+
+        internal func MoveAndResizeImpl(_ rect: UWP.RectInt32) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.MoveAndResize(pThis, .from(swift: rect)))
+            }
+        }
+
+        internal func MoveInZOrderAtBottomImpl() throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.MoveInZOrderAtBottom(pThis))
+            }
+        }
+
+        internal func MoveInZOrderAtTopImpl() throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.MoveInZOrderAtTop(pThis))
+            }
+        }
+
+        internal func MoveInZOrderBelowImpl(_ windowId: WinAppSDK.WindowId) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.MoveInZOrderBelow(pThis, .from(swift: windowId)))
+            }
+        }
+
+        internal func ShowImpl() throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.Show(pThis))
+            }
+        }
+
+    }
+
+    public class IDesktopSiteBridgeFactory: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeFactory }
+
+    }
+
+    public class IDesktopSiteBridgeStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeStatics }
+
+        internal func IsSupportedImpl() throws -> Bool {
+            var result: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeStatics.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.IsSupported(pThis, &result))
+            }
+            return .init(from: result)
+        }
+
+    }
+
 }
