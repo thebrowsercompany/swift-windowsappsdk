@@ -1,5 +1,6 @@
 {
   "package": "Microsoft.WindowsAppSDK",
+  "version": "1.5.240205001-preview1",
   "project": "WinAppSDK",
   "dependencies": [
     "Microsoft.Windows.SDK.Contracts"
