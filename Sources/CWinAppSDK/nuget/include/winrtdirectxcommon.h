@@ -141,6 +141,7 @@
 
 
 
+
 /*
  *
  * Typedef of Windows.Graphics.DirectX.DirectXAlphaMode
@@ -423,6 +424,7 @@ ABI_NAMESPACE_END
 #pragma warning (disable:4001) 
 #pragma once 
 #pragma warning (pop)
+
 
 
 
